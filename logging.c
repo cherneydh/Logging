@@ -1,8 +1,20 @@
 #include <stdio.h>
 
-int main()
+void open_log(){
 
-{
-	printf("Placeholder\n");
-	return 0;
 }
+
+void close_log(){
+
+}
+
+void read_log(){
+
+}
+
+/* DATE AND TIME || LINE NUMBER || CONTEXTUAL NAME || TYPE || DESCRIPTION || OTHER */
+void write_log(char*){
+
+}
+
+
