@@ -14,9 +14,11 @@ int main(){
 
 	sleep(1);
 
-	printf("This shit even work?");
-
+	flush_log();
+	
 	read_log();
+
+	flush_log();
 
 	close_log();	
 }

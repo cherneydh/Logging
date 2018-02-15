@@ -7,7 +7,6 @@ FILE *file;
 
 int c;
 char buffer[1024];
-char buff[1024];
 
 char *asciitime;
 time_t current;
@@ -17,7 +16,7 @@ char type[20];
 char *err = type;
 
 void open_log(){
-	file = fopen("console.log", "a+");
+	file = fopen("console.log", "a");
 	memset(buffer, '\0', sizeof(buffer));
 	setvbuf(file, buffer, _IOFBF, 1024);
 }
@@ -27,10 +26,7 @@ void close_log(){
 }
 
 void read_log(){
-	fread(buff, 1024, 1, file);
-	buff[sizeof(buff)-1] = 0;
-	printf("%s", buff);
-	printf("This shit broke");
+	system("cat console.log");
 }
 
 /* DATE AND TIME || LINE NUMBER || CONTEXTUAL NAME || TYPE || DESCRIPTION || OTHER */
